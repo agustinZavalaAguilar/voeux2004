@@ -6,7 +6,7 @@ function start () {
     function step1(){
         //declaration de variables pour la prémière carte de voeux
         var step1 = document.getElementById('step1');
-        var title = document.getElementById('voeux');
+        var title = document.getElementById('voeux1');
         var imgPhilosophe = document.getElementById('imgPhilosophe');
         var citation = document.getElementById('citation');
     
@@ -54,6 +54,7 @@ function start () {
             step2.style.opacity = 1;
             //=> entrée des voeux
             title2.style.opacity = 1;
+            title2.style.right = 0;           
         setTimeout(() => {
             title2.style.top = 0;
             }, "1000");
