@@ -59,7 +59,7 @@ setTimeout(() => {
         });
         
     }
-} , 4300);/*Ferme le timeout ouvert avant la fonction afin de démarrer l'audio avant les
+} , 4400);/*Ferme le timeout ouvert avant la fonction afin de démarrer l'audio avant les
           fonctions*/
 }
    
