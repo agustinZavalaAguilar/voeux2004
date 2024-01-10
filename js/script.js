@@ -1,6 +1,27 @@
 console.log('hello');
 
+function play() {
+    const audio = document.getElementById("my-audio");
+    console.log('audio');
+    audio.volume = 0.1;
+    audio.play();
+  }
+
+  function stop() {
+    const audio = document.getElementById("my-audio");
+    audio.volume = 0;
+    audio.stop();
+  }
+
+  
 function start () {
+
+    
+    play();
+    
+setTimeout(() => {
+    
+
     step1();
 
     function step1(){
@@ -22,7 +43,7 @@ function start () {
             //=> entrée d'image du philosophe
         setTimeout(()=> {
             imgPhilosophe.style.opacity = 1;
-            },"2000");
+            },"1500");
         citation.style.opacity=1;      
         citation.style.bottom = 0;
         //sortie des trois élements
@@ -31,11 +52,15 @@ function start () {
             title.style.opacity = 0;
             imgPhilosophe.style.opacity = 0;
             citation.style.opacity=0; 
-            step2();//appel de la fonction qui déploie la carte suivante
+    
+            step2();//appel de la fonction qui déploie la carte suivante            
         }, '8000');
        
         });
+        
     }
+} , 4300);/*Ferme le timeout ouvert avant la fonction afin de démarrer l'audio avant les
+          fonctions*/
 }
    
     function step2() {
@@ -61,9 +86,9 @@ function start () {
             //=> entrée d'image du philosophe
         setTimeout(()=> {
             imgPhilosophe2.style.opacity = 1;
-            },"2000");
+            },"1500");
         citation2.style.opacity=1;      
-        citation2.style.bottom = 0;
+        citation2.style.left = 0;
         //sortie des trois élements
         setTimeout(() => {
             step2.style.opacity = 0;  
@@ -91,20 +116,24 @@ function start () {
                     step3.style.opacity = 1;
                     //=> entrée des voeux
                     title3.style.opacity = 1;
+                    title3.style.left = 0;
                 setTimeout(() => {
                     title3.style.top = 0;
                     }, "1000");
                     //=> entrée d'image du philosophe
                 setTimeout(()=> {
                     imgPhilosophe3.style.opacity = 1;
-                    },"2000");
+                    },"1500");
                 citation3.style.opacity=1;      
-                citation3.style.bottom = 0;
+                citation3.style.right = 0;
                 //sortie des trois élements
                 setTimeout(() => {
                     step3.style.opacity = 0;  
                     title3.style.opacity = 0;
+                    console.log(imgPhilosophe3);
                     imgPhilosophe3.style.opacity = 0;
+                    imgPhilosophe3.style.width = "100%";
+                    imgPhilosophe3.style.height = "100%";
                     citation3.style.opacity=0; 
                     step4();
                 }, '8000');
@@ -137,7 +166,7 @@ function start () {
                 //=> entrée d'image du philosophe
             setTimeout(()=> {
                 imgPhilosophe4.style.opacity = 1;
-                },"2000");
+                },"1500");
             citation4.style.opacity=1;      
             citation4.style.bottom = 0;
             //sortie des trois élements
@@ -174,7 +203,7 @@ function start () {
                 //=> entrée d'image du philosophe
             setTimeout(()=> {
                 imgPhilosophe5.style.opacity = 1;
-                },"2000");
+                },"1500");
             citation5.style.opacity=1;      
             citation5.style.bottom = 0;
             //sortie des trois élements
@@ -182,11 +211,14 @@ function start () {
                 step5.style.opacity = 0;  
                 title5.style.opacity = 0;
                 imgPhilosophe5.style.opacity = 0;
-                citation5.style.opacity=0;                    
+                citation5.style.opacity=0;  
+            setTimeout(() => {
+            stop();
+            }, 2000);                     
             }, '8000');
             
         });          
         
     }
-
+    
 }

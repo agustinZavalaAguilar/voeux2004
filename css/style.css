@@ -42,10 +42,10 @@ section:before {
     height: 50%;
 }
 
-.step1:before {
-    background-image: url(../images/greceAntiqueMobile.png);
+/*.step1:before {
+    background-image: url(../images/greceAntique_M_Aurelius.png);
 
-}
+}*/
 
 .step1, .step2, .step3, .step4, .step5 {
     flex-direction: column;
@@ -63,8 +63,9 @@ section:before {
 }
 
 p, #meilleursVoeux {
-    font-family: Koulen;
+    font-family: 'Noto Serif', serif;
     color: black;
+    font-size: large;
     
 }
 
@@ -87,11 +88,15 @@ p, #meilleursVoeux {
 }
 
 #voeux1 {
-    top: -150px;
+    top: -190px;
 }
 
 #voeux2 {
     right: -150px;
+}
+
+#voeux3 {
+    left: -150px;
 }
 
 .citation {
@@ -101,9 +106,19 @@ p, #meilleursVoeux {
     margin-top: 1rem;
     opacity: 0;
     transition: all 3s;
-    position: relative;
-    bottom: -100px;
-    
+    position: relative;  
+}
+
+#citation {    
+    bottom: -100px;  
+}
+
+#citation2 {
+    left:-1000px;
+}
+
+#citation3 {
+    right: -1000px;
 }
 
 .step2, .step3, .step4, .step5 {
@@ -117,5 +132,38 @@ p, #meilleursVoeux {
 
 .imgPhilosophe, #imgPhilosophe2, #imgPhilosophe3, #imgPhilosophe4, #imgPhilosophe5 {
     opacity: 0;
-    transition: all 5s;
+    transition: all 2s;
 }
+
+#imgPhilosophe3 img {
+    height: 0;
+    width: 0;
+}
+
+#step1:before {
+    background-color: #13bce6be;
+    z-index: 0;
+    opacity: .5;
+}
+
+#step3:before {
+    background-color: #512205;
+    z-index: 0;
+    opacity: .5;
+}
+
+#step4:before {
+    background-color: #343232d1;
+    z-index: 0;
+    opacity: .5;
+}
+
+#step5:before {
+    background-color: #1356e64a;
+    z-index: 0;
+    opacity: .5;
+}
+
+/*#my-audio {
+    transition: 3s;
+}*/
