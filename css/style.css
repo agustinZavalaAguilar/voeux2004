@@ -135,9 +135,12 @@ p, #meilleursVoeux {
     transition: all 2s;
 }
 
-#imgPhilosophe3 img {
-    height: 0;
-    width: 0;
+#imgPhilosophe3  { 
+    transform: scale(0.2);
+}
+
+#imgPhilosophe5 {
+    transform: scale(3);
 }
 
 #step1:before {

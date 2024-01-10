@@ -59,7 +59,7 @@ setTimeout(() => {
         });
         
     }
-} , 4400);/*Ferme le timeout ouvert avant la fonction afin de démarrer l'audio avant les
+} , 4500);/*Ferme le timeout ouvert avant la fonction afin de démarrer l'audio avant les
           fonctions*/
 }
    
@@ -122,7 +122,8 @@ setTimeout(() => {
                     }, "1000");
                     //=> entrée d'image du philosophe
                 setTimeout(()=> {
-                    imgPhilosophe3.style.opacity = 1;
+                    imgPhilosophe3.style.transform = 'scale(1)';
+                    imgPhilosophe3.style.opacity = 1;                    
                     },"1500");
                 citation3.style.opacity=1;      
                 citation3.style.right = 0;
@@ -131,9 +132,7 @@ setTimeout(() => {
                     step3.style.opacity = 0;  
                     title3.style.opacity = 0;
                     console.log(imgPhilosophe3);
-                    imgPhilosophe3.style.opacity = 0;
-                    imgPhilosophe3.style.width = "100%";
-                    imgPhilosophe3.style.height = "100%";
+                    imgPhilosophe3.style.opacity = 0;                    
                     citation3.style.opacity=0; 
                     step4();
                 }, '8000');
@@ -202,6 +201,7 @@ setTimeout(() => {
                 }, "1000");
                 //=> entrée d'image du philosophe
             setTimeout(()=> {
+                imgPhilosophe5.style.transform = 'scale(1)';
                 imgPhilosophe5.style.opacity = 1;
                 },"1500");
             citation5.style.opacity=1;      
