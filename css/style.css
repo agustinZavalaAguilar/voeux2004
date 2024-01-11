@@ -170,3 +170,36 @@ p, #meilleursVoeux {
 /*#my-audio {
     transition: 3s;
 }*/
+
+/*------------centrer éléments quand le viewport est inférieur à 545px------------*/
+
+@media screen and (max-width : 545px){ 
+
+#annee {
+    font-size: 80px;
+}
+.voeux {
+    margin-bottom: 1rem;     
+    width: 300px; 
+    padding: 0;
+}
+
+.citation {
+    width: 300px
+}
+
+.stepInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+
+/*.imgPhilosophe {
+    display: flex;
+    justify-content: center
+}*/
+
+
+};

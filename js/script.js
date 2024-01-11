@@ -9,10 +9,10 @@ function play() {
 
   function stop() {
     const audio = document.getElementById("my-audio");
+    console.log(audio);
     audio.volume = 0;
     audio.stop();
   }
-
   
 function start () {
 
@@ -30,7 +30,9 @@ setTimeout(() => {
         var title = document.getElementById('voeux1');
         var imgPhilosophe = document.getElementById('imgPhilosophe');
         var citation = document.getElementById('citation');
-    
+        var play = document.getElementById('play');
+        //cacher le boutton play
+        play.style.display = 'none';
         setTimeout(()=>{
         //entrée de la carte 1
         //=> entrée d'image de fonds
@@ -189,6 +191,7 @@ setTimeout(() => {
         var title5 = document.getElementById('voeux5');
         var imgPhilosophe5 = document.getElementById('imgPhilosophe5');
         var citation5 = document.getElementById('citation5');
+        var play = document.getElementById('play');
                     
         setTimeout(()=>{
             //entrée de la carte
@@ -211,7 +214,9 @@ setTimeout(() => {
                 step5.style.opacity = 0;  
                 title5.style.opacity = 0;
                 imgPhilosophe5.style.opacity = 0;
-                citation5.style.opacity=0;  
+                citation5.style.opacity=0;                
+                //cacher le boutton play
+                play.style.display = 'flex';
             setTimeout(() => {
             stop();
             }, 2000);                     
